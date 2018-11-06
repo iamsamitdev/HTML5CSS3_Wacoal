@@ -1,0 +1,145 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS3 Target</title>
+
+    <style>
+
+        body{
+            font-family: Helvetica, sans-serif;
+        }
+        main{
+            overflow: hidden;
+            width: 1000px;
+            margin: 0 auto;
+        }
+
+        section.left
+        {
+            width: 200px;
+            position: fixed;
+        }
+
+        section.right
+        {
+            position: absolute;
+            left: 400px;
+            width: 750px;
+            border-left: 2px solid red;
+            padding: 20px;
+        }
+
+        ul{
+            list-style-type: none;
+        }
+
+         ul li a{
+            font-size: 40px;
+            text-decoration: none;
+            color: green;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        ul li a:hover{
+            border-bottom: 8px solid red;
+        }
+
+        section.right div h1
+        {
+            font-size: 50px;
+            margin-top: 0px;
+        }
+
+        section.right div p
+        {
+            font-size: 50px;
+        }
+
+         /**** Target CSS ****/
+         #home:target , #about:target, #service:target
+         {
+             background-color: gold;
+         }
+
+         :focus {
+            outline: 0;
+        }
+
+    </style>
+</head>
+
+<body>
+    <main>
+
+        <section class="left">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#service">Service</a></li>
+            </ul>
+        </section>
+
+        <section class="right">
+             <div id="home">
+                 <h1>Home</h1>
+                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit enim, excepturi non ipsam nisi veritatis quam accusamus provident. Adipisci eveniet aspernatur quisquam, cupiditate accusamus neque accusantium repudiandae provident perspiciatis dolorum.</p>
+             </div>
+             <div id="about">
+                 <h1>About</h1>
+                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit enim, excepturi non ipsam nisi veritatis quam accusamus provident. Adipisci eveniet aspernatur quisquam, cupiditate accusamus neque accusantium repudiandae provident perspiciatis dolorum.</p>
+             </div>
+             <div id="service">
+                 <h1>Service</h1>
+                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit enim, excepturi non ipsam nisi veritatis quam accusamus provident. Adipisci eveniet aspernatur quisquam, cupiditate accusamus neque accusantium repudiandae provident perspiciatis dolorum.</p>
+             </div>
+        </section>
+
+    </main>
+
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script>
+        // Select all links with hashes
+        $('a[href*="#"]')
+        // Remove links that don't actually link to anything
+        .not('[href="#"]')
+        .not('[href="#0"]')
+        .click(function(event) {
+            // On-page links
+            if (
+            location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+            && 
+            location.hostname == this.hostname
+            ) {
+            // Figure out element to scroll to
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            // Does a scroll target exist?
+            if (target.length) {
+                // Only prevent default if animation is actually gonna happen
+               // event.preventDefault();
+                $('html, body').animate({
+                scrollTop: target.offset().top-30
+                }, 1000, function() {
+                // Callback after animation
+                // Must change focus!
+                var $target = $(target);
+                $target.focus();
+                if ($target.is(":focus")) { // Checking if the target was focused
+                    return false;
+                } else {
+                    $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+                    $target.focus(); // Set focus again
+                };
+                });
+            }
+            }
+        });
+    </script>
+
+</body>
+
+</html>

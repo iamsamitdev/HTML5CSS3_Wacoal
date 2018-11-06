@@ -1,0 +1,105 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS3 Media Queries</title>
+    <style>
+
+        body{
+            font-family: Helvetica, sans-serif;
+            background: gray;
+        }
+        
+        /**** MOBILE SIZE ****/
+        @media screen and (min-width:50px) {
+            main{
+                width: 100%;
+                margin: 0 auto;
+                overflow: hidden;
+            }
+
+            main section{
+                float: left;
+                background: white;
+                padding: 20px;
+                margin: 10px;
+                overflow: hidden;
+            }
+        }
+        
+        /**** TABLET SIZE *****/
+        @media screen and (min-width:768px) {
+            main{
+                width: 95%;
+                margin: 0 auto;
+                overflow: hidden;
+            }
+
+            main section{
+                width: 41%;
+                float: left;
+                background: white;
+                padding: 20px;
+                margin: 10px;
+            }
+        }
+        
+        /**** DESKTOP SIZE *****/
+        @media screen and (min-width:1024px) {
+            main{
+                width: 1024px;
+                margin: 0 auto;
+                overflow: hidden;
+            }
+
+            main section{
+                width: 18%;
+                float: left;
+                background: white;
+                padding: 20px;
+                margin: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <section>
+            <article>
+                <h1>Article 1</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae ullam incidunt pariatur
+                    asperiores adipisci reprehenderit labore obcaecati unde laboriosam tempore, quasi est nesciunt?
+                    Molestiae, tempora veritatis. Molestias quidem illo consequatur.</p>
+            </article>
+        </section>
+        <section>
+            <article>
+                <h1>Article 2</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae ullam incidunt pariatur
+                    asperiores adipisci reprehenderit labore obcaecati unde laboriosam tempore, quasi est nesciunt?
+                    Molestiae, tempora veritatis. Molestias quidem illo consequatur.</p>
+            </article>
+        </section>
+        <section>
+            <article>
+                <h1>Article 3</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae ullam incidunt pariatur
+                    asperiores adipisci reprehenderit labore obcaecati unde laboriosam tempore, quasi est nesciunt?
+                    Molestiae, tempora veritatis. Molestias quidem illo consequatur.</p>
+            </article>
+        </section>
+        <section>
+            <article>
+                <h1>Article 4</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae ullam incidunt pariatur
+                    asperiores adipisci reprehenderit labore obcaecati unde laboriosam tempore, quasi est nesciunt?
+                    Molestiae, tempora veritatis. Molestias quidem illo consequatur.</p>
+            </article>
+        </section>
+    </main>
+</body>
+
+</html>

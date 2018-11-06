@@ -1,0 +1,31 @@
+@media screen and (min-width:50px){
+    .col-footer-left{
+        text-align: center;
+    }
+
+    .col-footer-right{
+        text-align: center;
+    }
+
+    .display-4{
+        font-size: 60px;
+    }
+}
+
+@media screen and (min-width:576px){
+    .col-footer-left{
+        text-align: left;
+    }
+
+    .col-footer-right{
+        text-align: right;
+    }
+
+    .display-4{
+        font-size: 30px;
+    }
+}
+
+.bg-light {
+    background-color: #cc023f!important;
+}

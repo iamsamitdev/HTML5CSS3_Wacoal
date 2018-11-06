@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery Ready</title>
+    <style>
+        .setbg{
+            background-color: chartreuse;
+            color: brown;
+            font-size: 20px;
+            border:1px solid gray;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>My title page</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat accusantium in pariatur ratione esse sequi eveniet earum velit eaque nesciunt doloremque facere deserunt totam, dolor dicta eos sapiente facilis. Ducimus?</p>
+    <ul>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ul>
+    <article id="content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi itaque quo assumenda nesciunt eligendi odit voluptates rem amet at! Omnis sed culpa sunt ex harum beatae corrupti accusantium facilis nisi!</article>
+    <a href="#">Read more...</a>
+    <div class="result">Result content</div>
+
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script>
+        $(function(){
+            $("h1").css('background-color','yellow').css('color','blue');
+            $("p").addClass("setbg");
+            $("p").removeClass("setbg");
+            $("p").toggleClass("setbg");
+            $("ul li:nth-child(2)").addClass("setbg");
+            $("#content").css("font-size","30px");
+            $("a").addClass("setbg");
+            $(".result").css("background-color","green");
+        });
+    </script>
+</body>
+</html>

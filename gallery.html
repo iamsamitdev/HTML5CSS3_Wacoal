@@ -1,0 +1,179 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gallery</title>
+
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <style>
+        body{
+            background: url('images/woodbg.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: Helvetica;
+            padding: 0;
+            margin: 0;
+        }
+
+        main{
+            width: 1000px;
+            margin:0 auto;
+            overflow: hidden;
+        }
+
+        h1{
+            font-size: 50px;
+            color: white;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        ul.polaroid{
+            list-style-type: none;
+            padding: 0px;
+            margin: 0px;
+            overflow: hidden;
+        }
+
+        ul.polaroid img{
+            width: 190px;
+        }
+
+        ul.polaroid li a
+        {
+            float: left;
+            display: inline;
+            padding: 10px;
+            margin-bottom: 30px;
+            margin-top: 30px;
+            margin-left: 30px;
+            background-color: #fff;
+            text-align: center;
+            font-size: 20px;
+            text-decoration: none;
+            border-radius: 5px;
+
+            transition: transform 0.5s ease-in;
+        }
+        
+        /*** even = คู่ ****/
+        ul.polaroid li:nth-child(even) a{
+            transform: rotate(2deg);
+        }
+
+        /*** odd = คู่ ****/
+        ul.polaroid li:nth-child(odd) a{
+            transform: rotate(-2deg);
+        }
+
+        ul.polaroid li a:hover{
+            transform: scale(1.25);
+        }
+
+    </style>
+
+</head>
+<body>
+    <main>
+        <h1>Photo Gallery</h1>
+
+        <ul class="polaroid">
+            <li>
+                <a href="images/gallery/image-01.jpg" class="image-link">
+                    <img src="images/gallery/image-01.jpg" alt="">
+                    <p>Samit Koyom</p>
+                </a>
+            </li>
+            <li>
+                <a href="images/gallery/image-02.jpg" class="image-link">
+                    <img src="images/gallery/image-02.jpg" alt="">
+                    <p>Samit Koyom</p>
+                </a>
+            </li>
+            <li>
+                <a href="images/gallery/image-03.jpg" class="image-link">
+                    <img src="images/gallery/image-03.jpg" alt="">
+                    <p>Samit Koyom</p>
+                </a>
+            </li>
+            <li>
+                <a href="images/gallery/image-04.jpg" class="image-link">
+                    <img src="images/gallery/image-04.jpg" alt="">
+                    <p>Samit Koyom</p>
+                </a>
+            </li>
+            <li>
+                <a href="images/gallery/image-05.jpg" class="image-link">
+                    <img src="images/gallery/image-05.jpg" alt="">
+                    <p>Samit Koyom</p>
+                </a>
+            </li>
+            <li>
+                <a href="images/gallery/image-06.jpg" class="image-link">
+                    <img src="images/gallery/image-06.jpg" alt="">
+                    <p>Samit Koyom</p>
+                </a>
+            </li>
+            <li>
+                <a href="images/gallery/image-07.jpg" class="image-link">
+                    <img src="images/gallery/image-07.jpg" alt="">
+                    <p>Samit Koyom</p>
+                </a>
+            </li>
+            <li>
+                <a href="images/gallery/image-08.jpg" class="image-link">
+                    <img src="images/gallery/image-08.jpg" alt="">
+                    <p>Samit Koyom</p>
+                </a>
+            </li>
+            <li>
+                <a href="images/gallery/image-09.jpg" class="image-link">
+                    <img src="images/gallery/image-09.jpg" alt="">
+                    <p>Samit Koyom</p>
+                </a>
+            </li>
+            <li>
+                <a href="images/gallery/image-10.jpg" class="image-link">
+                    <img src="images/gallery/image-10.jpg" alt="">
+                    <p>Samit Koyom</p>
+                </a>
+            </li>
+            <li>
+                <a href="images/gallery/image-11.jpg" class="image-link">
+                    <img src="images/gallery/image-11.jpg" alt="">
+                    <p>Samit Koyom</p>
+                </a>
+            </li>
+            <li>
+                <a href="images/gallery/image-12.jpg" class="image-link">
+                    <img src="images/gallery/image-12.jpg" alt="">
+                    <p>Samit Koyom</p>
+                </a>
+            </li>
+        </ul>
+
+    </main>
+
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+
+    <script>
+        $(function(){
+            $('.image-link').magnificPopup({
+                type: 'image',
+                gallery:{
+			        enabled:true
+			    },
+                zoom: {
+                    enabled: true, 
+                    duration: 300, 
+                    easing: 'ease-in-out'
+			    }
+            });
+        });
+    </script>
+</body>
+</html>

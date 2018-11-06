@@ -1,0 +1,219 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>HTML5 Exercise1</title>
+    <style>
+        body {
+            padding: 0px;
+            margin: 0px;
+            font-family:  Helvetica, sans-serif;
+        }
+
+        header {
+            width: 100%;
+            background-color: crimson;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        header section {
+            width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+            overflow: hidden;
+        }
+
+        header section div {
+            float: left;
+            color: #fff;
+            font-size: 24px;
+        }
+
+        header section nav {
+            float: right;
+        }
+
+        header section nav ul {
+            list-style-type: none;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        header section nav ul li {
+            float: left;
+            margin-right: 20px;
+        }
+
+        header section nav ul li a {
+            color: white;
+            font-size: 20px;
+            text-decoration: none;
+        }
+
+        /**** Section Intro ****/
+        section#intro
+        {
+            height: 500px;
+            background: url('images/bg.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-color: aqua;
+        }
+        
+        section#intro article
+        {
+            width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        section#intro h1
+        {
+            padding: 0px;
+            margin: 0px;
+            padding-top: 350px;
+            font-size: 36px;
+            color: #fff;
+        }
+
+        section#intro p
+        {
+            padding: 0px;
+            margin: 0px;
+            font-size: 24px;
+            color: #fff;
+        }
+
+        /**** Section hilight ****/
+        section#hilight
+        {
+            width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+            overflow: hidden;
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+        section#hilight div
+        {
+            width: 30%;
+            float: left;
+            margin-right: 20px;
+            text-align: center;
+        }
+
+        section#hilight div:last-child
+        {
+            float: left;
+            width: 30%;
+            margin-right: 0px;
+        }
+
+        /**** Footer ***/
+        footer
+        {
+            background-color: darkolivegreen;
+        }
+
+        footer article
+        {
+            width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            color: #fff;
+            overflow: hidden;
+        }
+
+        .col-left{
+            float: left;
+        }
+
+        .col-right{
+            float: right;
+            text-align: right;
+        }
+
+        i[class^="fa"]{
+            color: chocolate;
+        }
+
+        .fa-heart{
+            color: aqua !important;
+        }
+
+        .material-icons.md-18 { font-size: 18px; }
+        .material-icons.md-24 { font-size: 24px; }
+        .material-icons.md-36 { font-size: 36px; }
+        .material-icons.md-48 { font-size: 48px; }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <section>
+            <div><i class="material-icons md-36">cloud_circle</i> LOGO</div>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="#">Service</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+    </header>
+
+    <!-- Intro-->
+    <section id="intro">
+        <article>
+            <h1>Introduction</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima suscipit</p>
+        </article>
+    </section>
+
+    <!-- Hilight -->
+    <section id="hilight">
+        <div>
+            <i class="far fa-heart fa-5x"></i>
+            <h1>About us</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+        <div>
+            <i class="fab fa-audible fa-5x"></i>
+            <h1>Our Services</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+        <div>
+                <i class="fas fa-coffee fa-5x"></i>
+                <h1>Our Teams</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+    </section>
+
+    <footer>
+        <article>
+            <div class="col-left"><ion-icon name="heart"></ion-icon> &copy;CopyRight 2018-2019 ITGenius.co.th</div>
+            <div class="col-right">Conact: email.contact@itgenius.co.th</div>
+        </article>
+    </footer>
+
+    <script src="https://unpkg.com/ionicons@4.4.2/dist/ionicons.js"></script>
+</body>
+
+</html>

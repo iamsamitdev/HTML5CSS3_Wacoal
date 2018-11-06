@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML 5 Audio with jQuery</title>
+    <style>
+        .audioDemo{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    
+    <audio class="audioDemo" controls preload="none">
+        <source src="audio/Beep_Short.mp3" type="audio/mpeg">
+        <source src="audio/Beep_Short.ogg" type="audio/ogg"> 
+    </audio>
+
+    <form method="post" action="html5_audio_with_jquery.html">
+        <input type="text" name="message" id="message">
+    </form>
+
+    <p><button id="play-alert">Play Alert</button></p>
+
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script>
+        $(function(){
+
+            $(".audioDemo").trigger('play');
+
+            // Event click play sound
+            $("#play-alert").click(function(){
+                //alert("OK");
+                $(".audioDemo").trigger('play');
+                //$(".audioDemo").trigger('pause'); // pause
+            });
+            
+            // Event submit form
+            $("form").submit(function(){
+                $(".audioDemo").trigger('play');
+                return false;
+            });
+
+        });
+    </script>
+</body>
+</html>

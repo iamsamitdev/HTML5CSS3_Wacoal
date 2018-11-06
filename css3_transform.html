@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS3 Transform</title>
+    <style>
+        #content{
+            width: 1000px;
+            margin: 0 auto;
+        }
+
+        div[class^="box"]{
+            width: 200px;
+            height: 100px;
+            border: 3px solid salmon;
+            float: left;
+            margin-left: 20px;
+            margin-top: 20px;
+            text-align: center;
+            padding-top: 100px;
+            /*** การกำหนด transition ***/
+            transition:transform 0.5s;
+        }
+        /* การเลื่อนตำแหน่ง */
+        .box_translate:active{
+            /* transform: translate(5px,5px); */
+            transform : rotate(30deg) scale(1.1,1.1);
+        }
+        
+        /* การหมุน */
+        .box_rotate:active{
+            transform: rotate(45deg);
+        }
+
+        /* การปรับขนาด */
+        .box_scale:active{
+            transform: scale(0.9,0.9);
+        }
+
+        .box_screw:active{
+            transform: skew(15deg,0deg);
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <div class="box_translate">Translate</div>
+        <div class="box_rotate">Rotate</div>
+        <div class="box_scale">Scale</div>
+        <div class="box_screw">Screw</div>
+    </div>
+</body>
+</html>

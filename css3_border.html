@@ -1,0 +1,62 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS3 Border</title>
+
+    <style>
+        #box1{
+            width: 400px;
+            height: 200px;
+            border: 2px solid brown;
+            padding: 10px;
+            /** คำสั่งลบมุม **/
+            /* border-radius: 20px; */
+            /** เลือกกำหนดบางมุม **/
+            border-top-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+
+        /* กำหนดรูปเป็นวงกลม */
+        img{
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            border: 8px solid rgb(139, 15, 15);
+        }
+
+        #box2{
+            width: 400px;
+            height: 200px;
+            border: 2px solid brown;
+            margin-top: 20px;
+            padding: 20px;
+
+            /*คำสั่งในการใส่เงา*/
+            /* box-shadow: -10px -10px 10px 5px greenyellow; */
+
+            /*กำหนดเงาล้อมรอบกรอบ*/
+            box-shadow: 0px 0px 10px 5px greenyellow;
+        }
+
+        img:hover{
+            box-shadow: 0px 0px 10px 5px greenyellow;
+        }
+        
+        img:active{
+            box-shadow: 0px 0px 10px 5px blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS3 Border</h1>
+    <img src="images/gal12.jpg" alt="">
+    <div id="box1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt nobis error aspernatur quibusdam eum unde excepturi expedita magni amet. Possimus obcaecati voluptate dolor ex illo voluptatem recusandae minima dolorum placeat?
+    </div>
+    <div id="box2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed nesciunt nihil quam excepturi provident sint temporibus ut. Quasi minima odit expedita, quae iure totam assumenda eveniet amet illum quia debitis?
+    </div>
+</body>
+</html>

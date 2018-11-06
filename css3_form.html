@@ -1,0 +1,151 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS3 Form</title>
+
+    <style> 
+
+        body{
+            font-family: Helvetica, sans-serif;
+            background-color: #ccc;
+        }
+
+        main{
+            width: 400px;
+            margin: 0 auto;
+        }
+
+        .form-group{
+            margin: 10px 0px;
+        }
+
+        input[type=text],input[type=email],input[type=file],input[type=search],input[type=tel], input[type=date]{
+            width: 100%;
+            padding: 8px;
+            font-size: 20px;
+        }
+
+        label{
+            display: block;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        input:required{
+            background-image: url('images/warn.png');
+            background-size: 20px;
+            background-position: 98% 8px;
+            background-repeat: no-repeat;
+        }
+
+        input:focus:invalid{
+            background-color: red;
+        }
+
+        input:focus:valid{
+            background-color: greenyellow;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Register Form</h1>
+        <form action="#" method="post" 
+        oninput="level.value=skill.valueAsNumber, total.value=workday.valueAsNumber*rate.valueAsNumber">
+            <fieldset>
+
+                <div class="form-group">
+                    <label for="regid">Register ID</label>
+                    <input type="text" id="regid" value="MT00083" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label for="fullname">Fullname</label>
+                    <input type="text" id="fullname" placeholder="ป้อนชื่อสกุลที่นี่" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="ป้อนอีเมล์ที่นี่" required multiple>
+                </div>
+
+                <div class="form-group">
+                    <label for="profile">Profile Image</label>
+                    <input type="file" id="profile" placeholder="เลือกรูปโปรไฟล์" required multiple>
+                </div>
+
+                <div class="form-group">
+                    <label for="profile">Favorite Color</label>
+                    <input type="text" list="color" required>
+                    <datalist id="color">
+                        <option value="Blue"></option>
+                        <option value="Green"></option>
+                        <option value="Yellow"></option>
+                        <option value="Red"></option>
+                    </datalist>
+                </div>
+
+                <div class="form-group">
+                    <label for="search">Search</label>
+                    <input type="search" id="search" placeholder="ป้อนคำค้นหา" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="tel">Tel</label>
+                    <input type="tel" id="tel" placeholder="ป้อนเบอร์โทรศัพท์" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="birthdate">Birth date</label>
+                    <input type="date" id="birthdate" placeholder="เลือกวันเกิด" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="website">Url</label>
+                    <input type="url" id="website" placeholder="ป้อนชื่อเว็บของคุณ" required>
+                </div>
+
+                 <div class="form-group">
+                    <label for="weight">Weight</label>
+                    <input type="number" id="weight" placeholder="ป้อนน้ำหนัก" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="skill">Skill</label>
+                    <input type="range" id="skill" name="skill" placeholder="เลือกทักษะของคุณ" required step="1" min="0" max="100" value="0">
+                    <output name="level" for="skill">0</output>/100
+                </div>
+
+                <div class="form-group">
+                    <label for="skill">Progress</label>
+                    <progress value="200" max="1000"></progress>
+                </div>
+
+                <div class="form-group">
+                    <label for="workday">Work days</label>
+                    <input type="number" id="workday" placeholder="ป้อนจำนวนวัน" required>
+                </div>
+
+                 <div class="form-group">
+                    <label for="rate">Rate per day</label>
+                    <input type="number" id="rate" placeholder="ค่าแรงต่อวัน" required>
+                </div>
+
+                <div class="form-group">
+                    Total: <output name="total">0.00</output>฿
+                </div>
+
+                <div class="form-group">
+                    <label for="fullname"> </label>
+                    <input type="submit" value="Submit">
+                </div>
+            </fieldset>
+        </form>
+    </main>
+</body>
+
+</html>

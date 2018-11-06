@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Posittion</title>
+    <style>
+        div{
+            padding: 20px;
+            color: #fff;
+        }
+        #wrapper{
+            width: 400px;
+        }
+        #div-1{
+            background: #000;
+        }
+        #div-2{
+            background: #C0C;
+            /* position: relative; */
+            /* top: 30px;
+            left: -20px; */
+            /* position: absolute;
+            top:0px;
+            right: 0px; */
+            position: relative;
+            z-index: 10;
+        }
+        #div-3{
+            background: #666;
+        }
+        #div-a{
+            background: #339;
+            position: fixed;
+            top:45%;
+            right: 0;
+            z-index: 6;
+        }
+        #div-b{
+            background: #66C;
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+        }
+        #div-c{
+            background: #99F;
+            z-index: 5;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="div-1">div-1</div>
+        <div id="div-2">
+            <div id="div-a">div-a</div>
+            <div id="div-b">div-b</div>
+            <div id="div-c">div-c</div>
+        </div>
+        <div id="div-3">div-3</div>
+    </div>
+</body>
+</html>

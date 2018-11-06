@@ -1,0 +1,65 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS3 Background</title>
+    <style>
+        #box1 {
+            width: 400px;
+            height: 200px;
+            border: 5px solid brown;
+            /*คำสั่งในการเพิ่มพื้นหลังด้วยรูปภาพ*/
+            background: url('images/gal12.jpg');
+            background-size: 100px 50px;
+            background-repeat: no-repeat;
+            background-origin: padding-box;  /*** padding-box , border-box***/
+            background-position: 300px 150px;
+        }
+
+        h1,h2{
+            text-shadow:0px 0px 5px greenyellow;
+        }
+
+        #box3{
+            width: 200px;
+            height: 300px;
+            border: 1px solid brown;
+            /*คำสั่งในการตัดขึ้นบรรทัดใหม่ เมื่อข้อความล้นกรอบ**/
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>This is my title page</h1>
+    <h2>นี่คือหัวเรื่องข้อบทความ</h2>
+
+    <div id="box3">
+        <p>กกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกก</p>
+        aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+    </div>
+
+    <div id="box1">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque debitis modi natus nam eos. Soluta quia itaque dolore provident
+        architecto ipsum pariatur, assumenda nemo enim numquam ex deleniti magnam aperiam!
+    </div>
+
+    <div id="box1">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque debitis modi natus nam eos. Soluta quia itaque dolore provident
+        architecto ipsum pariatur, assumenda nemo enim numquam ex deleniti magnam aperiam!
+    </div>
+
+    <div id="box1">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque debitis modi natus nam eos. Soluta quia itaque dolore provident
+            architecto ipsum pariatur, assumenda nemo enim numquam ex deleniti magnam aperiam!
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque debitis modi natus nam eos. Soluta quia itaque dolore provident
+            architecto ipsum pariatur, assumenda nemo enim numquam ex deleniti magnam aperiam!
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque debitis modi natus nam eos. Soluta quia itaque dolore provident
+            architecto ipsum pariatur, assumenda nemo enim numquam ex deleniti magnam aperiam!
+                </div>
+</body>
+
+</html>

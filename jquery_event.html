@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery Event</title>
+    <style>
+        .setbg{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>My Title page</h1>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos error velit nam nihil pariatur suscipit nemo, placeat, commodi harum odit hic ab, vitae quos laboriosam accusamus cupiditate quo modi dignissimos.</p>
+    <button>Click action</button><br><br>
+
+    <form id="myform" method="post">
+        <input type="text" name="fullname" id="fullname" data-name="myinput">
+        <div id="result"></div>
+    </form>
+
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script>
+        $("button").click(function(){
+            $("p").toggleClass("setbg");
+        });
+
+        $("p").mousemove(function(){
+            $("p").addClass("setbg");
+        });
+
+        $("body").keydown(function(key){
+            if(key.keyCode==13){
+                $("p").toggleClass("setbg");
+            } else if(key.keyCode==27){
+                alert("Are you cancel ?");
+            }else if(key.keyCode==113){
+                window.location = "http://www.google.com";
+            }
+        });
+
+        $("form#myform").submit(function(){
+            var fullname = $("input[data-name=myinput]").val();
+            $("#result").prepend(fullname);
+            return false;
+        });
+    </script>
+</body>
+</html>

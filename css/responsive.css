@@ -1,0 +1,111 @@
+body{
+    font-family: Helvetica, sans-serif;
+    background-color: #ccc;
+}
+
+header{
+    background: brown;
+    position: fixed;
+    width: 100%;
+    padding:15px 0px;
+}
+
+.fa-bars{
+    color: #fff;
+    font-size: 20px;
+    position: fixed;
+    right: 15px;
+    top: 15px;
+}
+
+/**** Mobile Size ****/
+@media screen and (min-width:50px){
+    .container{
+        width: 95%;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    .logo{
+        width: 100%;
+        font-size: 20px;
+        color: white;
+    }
+
+    nav{
+        overflow: hidden;
+        margin-top: 20px;
+        /*** ซ่อนชุดเมนูเอาไว้ก่อน เมื่อเข้าด้วย mobile ***/
+        display: none;
+    }
+
+    nav ul{
+        list-style-type: none;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    nav ul li{
+        border: 1px solid white;
+        padding: 10px;
+        margin-top: 5px;
+        border-radius: 5px;
+    }
+
+    nav ul li a{
+        display: block;
+        color: white;
+        text-decoration: none;
+    }
+
+}
+
+/**** Desktop Size ****/
+@media screen and (min-width:1024px){
+    .container{
+        width: 1024px;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    .logo{
+        float: left;
+        width: 200px;
+        font-size: 20px;
+        color: white;
+    }
+
+    nav{
+        float: right;
+        overflow: hidden;
+        margin-top: 0px;
+        /*** แสดงเมนูเมื่ออยู่บน desktop ***/
+        display: block;
+    }
+
+    nav ul{
+        list-style-type: none;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    nav ul li{
+        float: left;
+        margin-left: 20px;
+        border: 0px;
+        padding: 0px;
+        margin-top: 0px;
+        border-radius: 0px;
+    }
+
+    nav ul li a{
+        display: block;
+        color: white;
+        font-size: 20px;
+        text-decoration: none;
+    }
+
+    .fa-bars{
+        display: none;
+    }
+}

@@ -1,0 +1,65 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery Effect</title>
+</head>
+<body>
+    <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae dignissimos nemo optio aliquam explicabo libero exercitationem vel. Corrupti eos quae eveniet dolor harum ratione tenetur veritatis illo culpa. Quo, assumenda!
+    </div>
+    <button id="btn_show">Show</button>
+    <button id="btn_hide">Hide</button>
+    <button id="btn_fadein">FadeIn</button>
+    <button id="btn_fadeout">FadOut</button>
+    <button id="btn_slideup">Slideup</button>
+    <button id="btn_slidedown">SlideDown</button>
+    <button id="btn_slidetoggle">SlideToggle</button>
+
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script>
+        $(function(){
+            $("div").css('background-color','yellow').css('margin','20px');
+
+            $("#btn_show").click(function(){
+                $("div").show();
+            });
+
+            $("#btn_hide").click(function(){
+                $("div").hide();
+            });
+
+            $("#btn_fadein").click(function(){
+                $("div").fadeIn();
+            });
+
+            $("#btn_fadeout").click(function(){
+                $("div").fadeOut();
+            });
+
+            $("#btn_slideup").click(function(){
+                $("div").slideUp();
+            });
+
+            $("#btn_slidedown").click(function(){
+                $("div").slideDown();
+            });
+
+            $("#btn_slidetoggle").click(function(){
+                $("div").slideToggle(1000);
+            });
+
+            // ฟังก์ชันในการทำงานตามเวลาที่กำหนด
+             setTimeout(function(){
+                $("div").slideToggle();
+            }, 2000);
+
+            // ฟังก์ชันในการทำงานซ้ำ
+            setInterval(function(){
+                $("div").slideToggle();
+            },3000);
+        });
+    </script>
+</body>
+</html>
